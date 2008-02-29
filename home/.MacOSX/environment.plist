@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple Computer//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CVS_RSH</key>
+	<string>ssh</string>
+	<key>PATH</key>
+	<string>/Users/samuel/bin:/usr/local/bin:/usr/local/sbin:/usr/local/smlnj/bin:/usr/local/mysql/bin:/usr/local/apache/bin:/usr/local/pgsql/bin:/usr/games/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sbin:/usr/sbin:/usr/X11R6/bin:/opt/kde/bin:/usr/games:/usr/texbin</string>
+    <key>CM_PATH</key>
+    <string>/usr/local/smlnj/lib</string>
+    <key>MANPATH</key>
+    <string>/usr/share/man:/usr/local/share/man:/usr/local/man:/Library/TeX/Distributions/.DefaultTeX/Contents/Man:/usr/X11/man</string>
+</dict>
+</plist>
