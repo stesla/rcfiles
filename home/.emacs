@@ -858,7 +858,8 @@ a buffer to switch to.  If it returns nil, ELSE-FORM is evaluated."
   (require-no-error 'caml-font)
   (add-to-list 'auto-mode-alist '("\\.ml[iylp]?$" . caml-mode))
   (autoload 'run-caml "inf-caml" "Run an inferior Caml process." t)
-  (define-key caml-mode-map (kbd "C-c l") 'goto-line))
+  (define-key caml-mode-map (kbd "C-c l") 'goto-line)
+  (setq inferior-caml-program "myocaml"))
 
 ;;; compile customizations.
 (when (require-no-error 'compile)
