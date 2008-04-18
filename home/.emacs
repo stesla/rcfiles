@@ -792,6 +792,25 @@ a buffer to switch to.  If it returns nil, ELSE-FORM is evaluated."
   (gnus))
 
 
+;; I like to use uuids, and it's tedious to generate them.
+(defcustom stesla-uuidgen-program "uuidgen" "Program to generate uuids")
+
+(defun stesla-uuidgen ()
+  (interactive)
+  (save-excursion
+    (save-restriction
+      (shell-command stesla-uuidgen-program)
+      (let ((buffer (current-buffer))
+            (output (get-buffer "*Shell Command Output*")))
+        (set-buffer output)
+        (let ((start (point-min))
+              (end (- (point-max) 1)))
+          (set-buffer buffer)
+          (insert-buffer-substring output start end))))))
+
+(stesla-define-select-key uuid "u"
+  (stesla-uuidgen))
+
 ;;;; I want a more intelligent mode selection for some files
 
 (mapcar (lambda (mapping) (add-to-list 'auto-mode-alist mapping))
