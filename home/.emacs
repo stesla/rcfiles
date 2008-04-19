@@ -1281,9 +1281,6 @@ every time"
    (igrep-insinuate)
    (setq igrep-find-use-xargs 'gnu))
 
-;;; inf-ruby.el - Inferior Ruby for a command line way of running ruby code
-(when (require-no-error 'inf-ruby))
-
 ;;; ruby-mod.el - For editing ruby files.  A lot of this is from rubygarden.org
 (when (require-no-error 'ruby-mode)
 
