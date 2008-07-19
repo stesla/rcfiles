@@ -92,4 +92,8 @@ export NFSEQ=`echo \*`
 
 export RUBYOPT="rubygems"
 
+# Erlang setup
+
+export EJABBERD_LIB=/usr/local/var/lib/ejabberd
+
 # End ~/.bash_profile

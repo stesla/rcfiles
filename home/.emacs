@@ -1467,36 +1467,6 @@ This works for links created by w3-region or w3m-region."
         ;(left . 0)
         ))
 
-;; Select a font to use.
-
-(when stesla-use-my-font-p
-  (when stesla-mac-p
-    (create-fontset-from-fontset-spec
-     (concat
-      "-*-*-*-*-*-*-*-*-*-*-*-*-fontset-bitstream,"
-      (concat "ascii:-apple-bitstream vera sans mono"
-              "-medium-r-normal-"
-              "-12-*-*-*-*-*-mac-roman")))
-    (fontset-add-mac-fonts "fontset-bitstream"))
-
-
-  (defconst stesla-emacs-font
-    (cond
-     ((and stesla-emacs-19-p stesla-w32-p)
-      "-*-Lucida Console-normal-r-*-*-15-142-*-*-c-*-*-ansi-")
-     (stesla-w32-p
-      "-*-Lucida Console-normal-r-*-U-14-*-*-*-c-*-iso8559-1")
-     (stesla-mac-p "fontset-bitstream")
-     ((and (fboundp 'display-pixel-width)
-           (< (display-pixel-width) 1024))
-      "-adobe-courier-medium-r-*-*-10-*-*-*-*-*-*-*")
-     (t "-adobe-courier-medium-r-*-*-12-*-*-*-*-*-*-*"))
-    "The font that Emacs should use."))
-
-(when stesla-use-my-font-p
-  (add-to-list 'default-frame-alist
-               (cons 'font stesla-emacs-font)))
-
 ;; Set default colors.
 
 ;; colortheme.el from Alex Schroeder, for Emacs beautification.
