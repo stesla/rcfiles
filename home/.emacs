@@ -1428,6 +1428,15 @@ This works for links created by w3-region or w3m-region."
 
             (local-set-key (kbd "C-c a") 'stesla-follow-link-at-point)))
 
+;;; erlang-mode
+(when (and (require-no-error 'erlang-start)
+           (require-no-error 'erlang))
+  (setq erlang-indent-level 2)
+  (let* ((mnesia-dir (concat (expand-file-name "~/.emacs.d/") "mnesia"))
+         (quoted-mnesia-dir (concat "\"" mnesia-dir "\""))
+         (options (list "-sname" "emacs" "-mnesia" "dir" quoted-mnesia-dir)))
+    (setq inferior-erlang-machine-options options)))
+
 ;;; mt.el -- Posting to Movable Type from Emacs
 
 (when (require-no-error 'mt)
