@@ -818,7 +818,8 @@ a buffer to switch to.  If it returns nil, ELSE-FORM is evaluated."
           ("\\.xml$" . xml-mode)
           ("\\.yml$" . conf-mode)
           ("bash_profile$" . sh-mode)
-          ("bashrc$" . sh-mode)))
+          ("bashrc$" . sh-mode)
+          ("\\.ebuild$" . sh-mode)))
 
 ;;;; Application configuration
 
