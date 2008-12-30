@@ -26,11 +26,15 @@ if [ -f "$HOME/.bashrc" ] ; then
     source $HOME/.bashrc
 fi
 
-PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/smlnj/bin:/usr/local/mysql/bin:/usr/local/apache/bin:/usr/local/pgsql/bin:/usr/games/bin:$PATH"
+### PATH
+# General path additions
+PATH="/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/games/bin:$PATH"
+PATH="/opt/local/bin:/opt/local/sbin:$PATH"
 
-# Other adjustments to PATH.
-
-PATH="$PATH:/sbin:/usr/sbin:/usr/X11R6/bin:/opt/kde/bin:/usr/games"
+# Specific Applications
+[ -d /usr/local/apache/bin ] && PATH="/usr/local/apache/bin:$PATH"
+[ -d /usr/local/mysql/bin ] && PATH="/usr/local/mysql/bin:$PATH"
+[ -d /usr/local/pgsql/bin ] && PATH="/usr/local/pgsql/bin:$PATH"
 
 export PATH
 
