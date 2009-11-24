@@ -29,12 +29,18 @@ fi
 ### PATH
 # General path additions
 PATH="/usr/local/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/X11R6/bin:/usr/games/bin:$PATH"
-PATH="/opt/local/bin:/opt/local/sbin:$PATH"
+PATH="/opt/local/lib/postgresql83/bin:/opt/local/bin:/opt/local/sbin:$PATH"
+PATH="$HOME/bin:$PATH"
 
 # Specific Applications
 [ -d /usr/local/apache/bin ] && PATH="/usr/local/apache/bin:$PATH"
 [ -d /usr/local/mysql/bin ] && PATH="/usr/local/mysql/bin:$PATH"
 [ -d /usr/local/pgsql/bin ] && PATH="/usr/local/pgsql/bin:$PATH"
+
+
+export JAVA_HOME=/Library/Java/Home
+export EC2_HOME=/opt/ec2-api-tools-1.3-41620
+PATH="$PATH:$EC2_HOME/bin"
 
 export PATH
 

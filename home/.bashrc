@@ -29,7 +29,18 @@ fi
 # Set the prompt.  We do this here because not all interactive shells are login
 # shells, and some terminals (e.g. xterm) don't eval ~/.bash_profile.
 
-export PS1="[\u@\h:\w]\\$ "
+function parse_git_dirty {
+  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
+}
+function parse_git_branch {
+  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
+}
+
+export PS1="[\u@\h:\w]\$(parse_git_branch)\\$ "
+
+export GOROOT=$HOME/Projects/go
+export GOOS=darwin
+export GOARCH=amd64
 
 #
 # Aliases
