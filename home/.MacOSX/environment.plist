@@ -5,7 +5,7 @@
 	<key>CVS_RSH</key>
 	<string>ssh</string>
 	<key>PATH</key>
-	<string>/Users/samuel/bin:/usr/local/bin:/usr/local/sbin:/usr/local/smlnj/bin:/usr/local/mysql/bin:/usr/local/apache/bin:/usr/local/pgsql/bin:/usr/games/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sbin:/usr/sbin:/usr/X11R6/bin:/opt/kde/bin:/usr/games:/usr/texbin</string>
+	<string>/Users/samuel/bin:/usr/local/bin:/usr/local/sbin:/usr/local/smlnj/bin:/usr/local/mysql/bin:/usr/local/apache/bin:/usr/local/pgsql/bin:/usr/games/bin:/bin:/sbin:/usr/bin:/usr/sbin:/sbin:/usr/sbin:/usr/X11R6/bin:/opt/kde/bin:/usr/games:/usr/texbin:/opt/local/bin:/opt/local/sbin</string>
     <key>CM_PATH</key>
     <string>/usr/local/smlnj/lib</string>
     <key>MANPATH</key>
