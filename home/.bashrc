@@ -38,7 +38,7 @@ function parse_git_branch {
 
 export PS1="[\u@\h:\w]\$(parse_git_branch)\\$ "
 
-export GOROOT=$HOME/Projects/go
+export GOROOT=$HOME/go
 export GOOS=darwin
 export GOARCH=amd64
 
