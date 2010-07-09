@@ -42,6 +42,24 @@ export GOROOT=$HOME/go
 export GOOS=darwin
 export GOARCH=amd64
 
+# Preferred utility programs.
+
+BROWSER=
+EDITOR="vim"
+MAILER=
+PAGER="less -isR"
+VISUAL="vim"
+export BROWSER EDITOR MAILER PAGER VISUAL
+
+# bash customizations
+
+shopt -s checkhash     # Verify that cached commands exist before execution.
+shopt -s checkwinsize  # Update LINES and COLUMNS as necessary.
+shopt -s cmdhist       # Save multi-line commands in a single history entry.
+shopt -s no_empty_cmd_completion  # Do not complete on nothing.
+export HISTCONTROL=ignoredups
+export HISTIGNORE="&:[bf]g:exit:clear"
+
 #
 # Aliases
 #
