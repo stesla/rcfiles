@@ -64,6 +64,18 @@ export HISTIGNORE="&:[bf]g:exit:clear"
 # Aliases
 #
 
+if ! (builtin type -p pbcopy); then
+    if (builtin type -p xclip); then
+        alias pbcopy='xclip -selection clipboard'
+    fi
+fi
+
+if ! (builtin type -p pbpaste); then
+    if (builtin type -p xclip); then
+        alias pbpaste='xclip -selection clipboard -o'
+    fi
+fi
+
 function grep-find () {
     find . -name '.svn' -prune -o -exec grep -Hn $@ {} \;
 }
