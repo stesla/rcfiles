@@ -72,14 +72,14 @@ export HISTIGNORE="&:[bf]g:exit:clear"
 # Aliases
 #
 
-if ! (builtin type -p pbcopy); then
-    if (builtin type -p xclip); then
+if ! (builtin type -p pbcopy > /dev/null); then
+    if (builtin type -p xclip > /dev/null); then
         alias pbcopy='xclip -selection clipboard'
     fi
 fi
 
-if ! (builtin type -p pbpaste); then
-    if (builtin type -p xclip); then
+if ! (builtin type -p pbpaste > /dev/null); then
+    if (builtin type -p xclip > /dev/null); then
         alias pbpaste='xclip -selection clipboard -o'
     fi
 fi
