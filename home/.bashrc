@@ -64,6 +64,10 @@ shopt -s no_empty_cmd_completion  # Do not complete on nothing.
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:[bf]g:exit:clear"
 
+# ruby stuff
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
+
 #
 # Aliases
 #
