@@ -30,6 +30,12 @@ if [ -f "$HOME/.bashrc.local" ]; then
     source $HOME/.bashrc.local
 fi
 
+# set PATH so it includes user's private bin if it exists
+
+if [ -d "$HOME/bin" ] ; then
+    PATH="$HOME/bin:$PATH"
+fi
+
 # Set the prompt.  We do this here because not all interactive shells are login
 # shells, and some terminals (e.g. xterm) don't eval ~/.bash_profile.
 
