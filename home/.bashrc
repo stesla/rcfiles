@@ -32,9 +32,9 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 
-if [ -d "$HOME/bin" ] ; then
-    PATH="$HOME/bin:$PATH"
-fi
+[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
+[[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
+export PATH
 
 # Set the prompt.  We do this here because not all interactive shells are login
 # shells, and some terminals (e.g. xterm) don't eval ~/.bash_profile.
