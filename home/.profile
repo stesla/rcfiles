@@ -15,11 +15,3 @@ if [ -n "$BASH_VERSION" ]; then
 	. "$HOME/.bashrc"
     fi
 fi
-
-# IL8N and L10N
-LANG=en_US
-LC_COLLATE=C
-LC_TIME=C
-LESSCHARSET=iso8859
-TZ=US/Pacific
-export LANG LC_COLLATE LC_TIME LESSCHARSET TZ
