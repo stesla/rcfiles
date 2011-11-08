@@ -6,3 +6,4 @@
       (load file)))
 
 (color-theme-zenburn)
+(server-start)
