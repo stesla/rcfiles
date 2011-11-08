@@ -5,11 +5,12 @@
 
 (package-initialize)
 
-(setq st-required-packages '(clojure-mode
-                             color-theme
-                             magit
-                             slime
-                             zenburn))
+(defvar st-required-packages '(clojure-mode
+                               color-theme
+                               magit
+                               paredit
+                               slime
+                               zenburn))
 
 (dolist (package st-required-packages)
   (when (not (package-installed-p package))
