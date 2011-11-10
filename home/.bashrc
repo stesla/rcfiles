@@ -37,18 +37,6 @@ PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:
 [[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
 export PATH
 
-# Set the prompt.  We do this here because not all interactive shells are login
-# shells, and some terminals (e.g. xterm) don't eval ~/.bash_profile.
-
-function parse_git_dirty {
-  [[ $(git status 2> /dev/null | tail -n1) != "nothing to commit (working directory clean)" ]] && echo "*"
-}
-function parse_git_branch {
-  git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/[\1$(parse_git_dirty)]/"
-}
-
-export PS1="[\u@\h:\w]\$(parse_git_branch)\\$ "
-
 export GOROOT=$HOME/go
 
 # Preferred utility programs.
@@ -68,6 +56,22 @@ shopt -s cmdhist       # Save multi-line commands in a single history entry.
 shopt -s no_empty_cmd_completion  # Do not complete on nothing.
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:[bf]g:exit:clear"
+
+if [ -d "/usr/local/etc/bash_completion.d" ]; then
+    for i in /usr/local/etc/bash_completion.d/*; do
+        source $i
+    done
+fi
+
+if type -t __git_ps1; then
+    export GIT_PS1_SHOWDIRTYSTATE=true
+    export GIT_PS1_SHOWSTASHSTATE=true
+    export GIT_PS1_SHOWUNTRACKEDFILES=true
+    export GIT_PS1_SHOWUPSTREAM="auto"
+    export PS1='[\u@\h:\w$(__git_ps1 " (%s)")]$ '
+else
+    export PS1='[\u@\h:\w]$ '
+fi
 
 # ruby stuff
 
