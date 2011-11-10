@@ -32,6 +32,7 @@ fi
 
 # set PATH so it includes user's private bin if it exists
 
+PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/X11R6/bin"
 [[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
 [[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
 export PATH
