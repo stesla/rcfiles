@@ -63,7 +63,7 @@ if [ -d "/usr/local/etc/bash_completion.d" ]; then
     done
 fi
 
-if type -t __git_ps1; then
+if (builtin type -t __git_ps1 > /dev/null); then
     export GIT_PS1_SHOWDIRTYSTATE=true
     export GIT_PS1_SHOWSTASHSTATE=true
     export GIT_PS1_SHOWUNTRACKEDFILES=true
