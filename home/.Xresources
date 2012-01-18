@@ -1,0 +1,36 @@
+#define FACE DejaVu Sans Mono
+
+Emacs*font: FACE-12
+
+XTerm*renderFont: true
+XTerm*faceName: FACE
+XTerm*faceSize: 12
+XTerm*faceSize1: 10
+XTerm*faceSize2: 12
+XTerm*faceSize3: 14
+XTerm*faceSize4: 16
+XTerm*faceSize5: 18
+XTerm*faceSize6: 20
+XTerm*dynamicColors: true
+XTerm*utf8: 2
+XTerm*showMissingGlyphs: true
+XTerm*saveLines: 5000
+! Zenburn
+XTerm*Background:  #3f3f3f
+XTerm*Foreground:  #dcdccc
+XTerm*color0:      #1E2320
+XTerm*color1:      #705050
+XTerm*color2:      #60b48a
+XTerm*color3:      #dfaf8f
+XTerm*color4:      #506070
+XTerm*color5:      #dc8cc3
+XTerm*color6:      #8cd0d3
+XTerm*color7:      #dcdccc
+XTerm*color8:      #709080
+XTerm*color9:      #dca3a3
+XTerm*color10:     #c3bf9f
+XTerm*color11:     #f0dfaf
+XTerm*color12:     #94bff3
+XTerm*color13:     #ec93d3
+XTerm*color14:     #93e0e3
+XTerm*color15:     #ffffff
