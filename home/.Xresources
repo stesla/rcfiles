@@ -1,8 +1,14 @@
 #define FACE DejaVu Sans Mono
 
+! Xft.dpi: 96
+! Xft.antialias: 1
+! Xft.hinting: 1
+! Xft.hintstyle: hintfull
+! Xft.rgba: rgb
+
 Emacs*font: FACE-12
 
-XTerm*renderFont: true
+XTerm*dynamicColors: true
 XTerm*faceName: FACE
 XTerm*faceSize: 12
 XTerm*faceSize1: 10
@@ -11,10 +17,11 @@ XTerm*faceSize3: 14
 XTerm*faceSize4: 16
 XTerm*faceSize5: 18
 XTerm*faceSize6: 20
-XTerm*dynamicColors: true
-XTerm*utf8: 2
-XTerm*showMissingGlyphs: true
+XTerm*metaSendsEscape: true
+XTerm*renderFont: true
 XTerm*saveLines: 5000
+XTerm*showMissingGlyphs: true
+XTerm*utf8: 2
 ! Zenburn
 XTerm*Background:  #3f3f3f
 XTerm*Foreground:  #dcdccc
