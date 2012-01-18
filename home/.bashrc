@@ -57,10 +57,10 @@ shopt -s no_empty_cmd_completion  # Do not complete on nothing.
 export HISTCONTROL=ignoredups
 export HISTIGNORE="&:[bf]g:exit:clear"
 
-if [ -d "/usr/local/etc/bash_completion.d" ]; then
-    for i in /usr/local/etc/bash_completion.d/*; do
-        source $i
-    done
+if [ -f "/etc/bash_completion.d/git" ]; then
+    source "/etc/bash_completion.d/git"
+elif [ -f "/usr/local/etc/bash_completion.d/git" ]; then
+    source "/usr/local/etc/bash_completion.d/git"
 fi
 
 if (builtin type -t __git_ps1 > /dev/null); then
