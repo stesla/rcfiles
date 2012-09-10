@@ -1,0 +1,29 @@
+#!/bin/bash
+
+function list-files {
+    find $(dirname $0) -name '.git' -prune -o -name $(basename $0) -prune -o -type f -print | cut -b3-
+}
+
+case $1 in
+    list)
+        list-files
+        ;;
+    update)
+        dir=$(cd $(dirname $0); pwd)
+        for src in $(list-files); do
+            dest="$HOME/.${src}"
+            if ! [ -e "$dest" ]; then
+                mkdir -v -p $(dirname $dest)
+                ln -v -s $dir/$src $dest
+            fi
+        done
+        ;;
+    clean)
+        for src in $(list-files); do
+            dest="$HOME/.${src}"
+            if [ -L "$dest" ]; then
+                rm -v "$dest"
+            fi
+        done
+        ;;
+esac
