@@ -26,18 +26,15 @@ if [ -f "/etc/bashrc" ] ; then
     source /etc/bashrc
 fi
 
-if [ -f "$HOME/.bashrc.local" ]; then
-    source $HOME/.bashrc.local
-fi
-
-# set PATH so it includes user's private bin if it exists
+export GOPATH=$HOME/golib:$HOME/gosrc
+export GOROOT=$HOME/go
 
 PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/X11R6/bin"
 [[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
 [[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
-export PATH
+[[ -d "$GOROOT/bin" ]] && PATH="$GOROOT/bin:$PATH"
 
-export GOROOT=$HOME/go
+export PATH
 
 # Preferred utility programs.
 
@@ -117,4 +114,6 @@ function update-all() {
     done
 }
 
-# End ~/.bashrc
+if [ -f "$HOME/.bashrc.local" ]; then
+    source $HOME/.bashrc.local
+fi
