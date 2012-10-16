@@ -58,6 +58,9 @@ if [ -f "/etc/bash_completion.d/git" ]; then
     source "/etc/bash_completion.d/git"
 elif [ -f "/usr/local/etc/bash_completion.d/git" ]; then
     source "/usr/local/etc/bash_completion.d/git"
+elif [ -f "/usr/local/etc/bash_completion.d/git-completion.bash" ]; then
+    source "/usr/local/etc/bash_completion.d/git-completion.bash"
+    source "/usr/local/etc/bash_completion.d/git-prompt.sh"
 fi
 
 if (builtin type -t __git_ps1 > /dev/null); then
