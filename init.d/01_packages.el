@@ -9,8 +9,7 @@
                                color-theme
                                magit
                                paredit
-                               slime
-                               zenburn))
+                               slime))
 
 (dolist (package st-required-packages)
   (when (not (package-installed-p package))
