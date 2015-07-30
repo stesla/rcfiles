@@ -1,8 +1,8 @@
 #!/bin/bash
 
-# One PATH to rule them all
-PATH="`bash --login -c 'echo $PATH'`"
-
+# Identify the home of our gtkrc file, important for setting styles of
+# gtk-based applications
+export GTK2_RC_FILES="$HOME/.gtkrc-2.0"
 
 # Set up X11
 xrdb -merge ~/.Xresources

@@ -53,9 +53,13 @@ myLayouts = avoidStruts $ smartBorders $
       tiled = named "Tall" (ResizableTall 1 (3/100) (11/16) [])
       tabs = named "Tabs" (tabbed shrinkText myTheme)
 
-myManageHook = composeAll [ className =? "Emacs"  --> doF (W.shift "1:emacs")
+myManageHook = composeAll [ className =? "Emacs"         --> doF (W.shift "1:emacs")
                           , className =? "Google-chrome" --> doF (W.shift "2:web")
-                          , className =? "Pidgin" --> doF (W.shift "3:im")
+                          , className =? "Firefox"       --> doF (W.shift "2:web")
+                          , className =? "X-www-browser" --> doF (W.shift "2:web")
+                          , className =? "Pidgin"        --> doF (W.shift "3:im")
+                          , className =? "Skype"         --> doF (W.shift "3:im")
+                          , className =? "rdesktop"      --> doF (W.shift "9:windows") <+> doCenterFloat
                           ]
 
 alert :: String -> X ()
