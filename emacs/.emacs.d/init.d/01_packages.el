@@ -6,10 +6,15 @@
 (package-initialize)
 
 (defvar st-required-packages '(clojure-mode
-                               color-theme
-                               magit
+                               go-mode
+                               haml-mode
+                               haskell-mode
+                               highlight-parentheses
+                               js2-mode
+                               lua-mode
                                paredit
-                               slime))
+                               slime
+                               yaml-mode))
 
 (dolist (package st-required-packages)
   (when (not (package-installed-p package))

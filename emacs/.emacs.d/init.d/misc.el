@@ -14,8 +14,7 @@
 
 (defalias 'yes-or-no-p 'y-or-n-p)
 
-(setq color-theme-is-global t
-      confirm-kill-emacs 'yes-or-no-p
+(setq confirm-kill-emacs 'yes-or-no-p
       echo-keystrokes 0.1
       font-lock-maximum-decoration t
       inhibit-startup-message t
