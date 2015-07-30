@@ -15,38 +15,13 @@
 # Place, Suite 330, Boston, MA 02111-1307 USA
 
 # Begin ~/.bashrc
-
 # Personal aliases and functions.
-
-# Personal environment variables and startup programs should go into ~/.bashrc.
-# System-wide environment variables and startup programs are in /etc/profile.
-# System-wide aliases and functions are in /etc/bashrc.
 
 if [ -f "/etc/bashrc" ] ; then
     source /etc/bashrc
 fi
 
-export GOPATH=$HOME/golib:$HOME/gosrc
-export GOROOT=$HOME/go
-
-PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/X11R6/bin"
-[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
-[[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
-[[ -d "$GOROOT/bin" ]] && PATH="$GOROOT/bin:$PATH"
-
-export PATH
-
-# Preferred utility programs.
-
-BROWSER=
-EDITOR="vim"
-MAILER=
-PAGER="less -isR"
-VISUAL="vim"
-export BROWSER EDITOR MAILER PAGER VISUAL
-
 # bash customizations
-
 shopt -s checkhash     # Verify that cached commands exist before execution.
 shopt -s checkwinsize  # Update LINES and COLUMNS as necessary.
 shopt -s cmdhist       # Save multi-line commands in a single history entry.
@@ -72,10 +47,6 @@ if (builtin type -t __git_ps1 > /dev/null); then
 else
     export PS1='[\u@\h:\w]$ '
 fi
-
-# ruby stuff
-
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 #
 # Aliases
@@ -116,7 +87,3 @@ function update-all() {
         echo
     done
 }
-
-if [ -f "$HOME/.bashrc.local" ]; then
-    source $HOME/.bashrc.local
-fi

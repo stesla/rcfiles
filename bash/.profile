@@ -8,10 +8,34 @@
 # for ssh logins, install and configure the libpam-umask package.
 #umask 022
 
-# if running bash
-if [ -n "$BASH_VERSION" ]; then
-    # include .bashrc if it exists
-    if [ -f "$HOME/.bashrc" ]; then
-	. "$HOME/.bashrc"
-    fi
+###
+# Golang
+###
+export GOPATH=$HOME/golib:$HOME/gosrc
+export GOROOT=$HOME/go
+
+###
+# Preferred utility programs.
+###
+BROWSER=
+EDITOR="vim"
+MAILER=
+PAGER="less -isR"
+VISUAL="vim"
+export BROWSER EDITOR MAILER PAGER VISUAL
+
+###
+# Path setup
+###
+PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/X11R6/bin"
+[[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
+[[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
+[[ -d "$GOROOT/bin" ]] && PATH="$GOROOT/bin:$PATH"
+export PATH
+
+###
+# Machine-specific environment
+###
+if [ -f "$HOME/.profile.local" ]; then
+    source $HOME/.profile.local
 fi
