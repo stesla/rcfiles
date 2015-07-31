@@ -19,3 +19,4 @@ history
 elpa
 swank
 init.d/local.el
+*.dat

@@ -31,6 +31,7 @@ PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:
 [[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
 [[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
 [[ -d "$GOROOT/bin" ]] && PATH="$GOROOT/bin:$PATH"
+[[ -d "$HOME/golib/bin" ]] && PATH="$HOME/golib/bin:$PATH"
 export PATH
 
 ###

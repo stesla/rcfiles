@@ -1,3 +1,5 @@
+;; emacs --script ~/.emacs.d/init.d/01_packages.el
+
 (setq package-archives
       '(("gnu" . "http://elpa.gnu.org/packages/")
         ("marmalade" . "http://marmalade-repo.org/packages/")
@@ -6,6 +8,8 @@
 (package-initialize)
 
 (defvar st-required-packages '(clojure-mode
+                               company
+                               flycheck
                                go-mode
                                haml-mode
                                haskell-mode
