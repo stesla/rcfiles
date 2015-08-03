@@ -5,10 +5,11 @@ module Music.Spotify
        ) where
 
 import XMonad
-import System.Cmd
+import System.Process
+
 
 spotifyCmd :: String -> IO ()
-spotifyCmd cmd = rawSystem "dbus-send" args >> return ()
+spotifyCmd cmd = createProcess (proc "dbus-send" args) >> return ()
   where args = ["--print-reply"
                ,"--dest=org.mpris.MediaPlayer2.spotify"
                ,"/org/mpris/MediaPlayer2"
