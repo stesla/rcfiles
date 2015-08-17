@@ -13,6 +13,9 @@ xsetroot -cursor_name left_ptr
 synergys
 xscreensaver -no-splash &
 
+# Start Dropbox
+dropbox.py start
+
 # Set up SSH keys
 SSH_ASKPASS=/usr/lib/ssh/x11-ssh-askpass
 ssh-add </dev/null
