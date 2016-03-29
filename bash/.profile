@@ -44,6 +44,6 @@ fi
 ###
 # BASH configuration
 ###
-if [ -n "$BASH" ]; then
-    source $HOME/.bashrc
+if [ -n "$BASH" ] && [ -f ~/.bashrc ]; then
+    . ~/.bashrc
 fi
