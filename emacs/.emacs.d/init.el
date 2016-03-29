@@ -11,6 +11,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(custom-safe-themes
+   (quote
+    ("7cbae9092a2138833ec757bd7547111bc29daf10cec8013f1b51d359ba547c99" default)))
  '(tab-width 4))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
