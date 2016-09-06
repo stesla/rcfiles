@@ -11,7 +11,7 @@
 ###
 # Golang
 ###
-export GOPATH=$HOME/golib:$HOME/gosrc
+export GOPATH=$HOME/golib:$HOME/Projects
 export GOROOT=$HOME/go
 
 ###
@@ -32,6 +32,7 @@ PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:
 [[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
 [[ -d "$GOROOT/bin" ]] && PATH="$GOROOT/bin:$PATH"
 [[ -d "$HOME/golib/bin" ]] && PATH="$HOME/golib/bin:$PATH"
+[[ -d "$HOME/Projects/bin" ]] && PATH="$HOME/Projects/bin:$PATH"
 export PATH
 
 ###
