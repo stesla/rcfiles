@@ -1,10 +1,12 @@
-#define FACE DejaVu Sans Mono
-
-Emacs*font: FACE-12
+Emacs*FontBackend: xft
+Emacs*font: DejaVu Sans Mono-12
+Emacs*menuBar: off
+Emacs*toolBar: -1
+Emacs*verticalScrollBars: off
 
 XTerm*bellIsUrgent: true
 XTerm*dynamicColors: true
-XTerm*faceName: FACE
+XTerm*faceName: DejaVu Sans Mono
 XTerm*faceSize: 12
 XTerm*faceSize1: 10
 XTerm*faceSize2: 12
