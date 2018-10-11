@@ -87,3 +87,5 @@ function update-all() {
         echo
     done
 }
+
+alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
