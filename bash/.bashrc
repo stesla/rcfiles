@@ -64,28 +64,4 @@ if ! (builtin type -p pbpaste > /dev/null); then
     fi
 fi
 
-function grep-find () {
-    find . -name '.svn' -prune -o -exec grep -Hn $@ {} \;
-}
-
-function status-all () {
-    for d in $@; do
-        echo "=== $d ==="
-        pushd $d > /dev/null
-        git status
-        popd > /dev/null
-        echo
-    done
-}
-
-function update-all() {
-    for d in $@; do
-        echo "=== $d ==="
-        pushd $d > /dev/null
-        git pull --rebase
-        popd > /dev/null
-        echo
-    done
-}
-
 alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'

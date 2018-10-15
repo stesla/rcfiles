@@ -41,10 +41,3 @@ export PATH
 if [ -f "$HOME/.profile.local" ]; then
     source $HOME/.profile.local
 fi
-
-###
-# BASH configuration
-###
-if [ -n "$BASH" ] && [ -f ~/.bashrc ]; then
-    . ~/.bashrc
-fi
