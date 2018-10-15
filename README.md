@@ -16,4 +16,5 @@ After that, you can install whichever sets of config files you want:
     cd ~/.rcfiles
     stow bash
     stow ssh
-    stow x11
+    stow tmux
+    stow vim
