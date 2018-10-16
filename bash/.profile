@@ -11,8 +11,8 @@
 ###
 # Golang
 ###
-export GOPATH=$HOME/golib:$HOME/Projects
-export GOROOT=$HOME/go
+export GOPATH="$HOME/golib:$HOME/Projects"
+export GOROOT="$HOME/go"
 
 ###
 # Preferred utility programs.
@@ -39,5 +39,14 @@ export PATH
 # Machine-specific environment
 ###
 if [ -f "$HOME/.profile.local" ]; then
-    source $HOME/.profile.local
+    source "$HOME/.profile.local"
+fi
+
+###
+# bash setup
+###
+if [ -n "$BASH_VERSION" ]; then
+  if [ -f "$HOME/.bashrc" ]; then
+    . "$HOME/.bashrc"
+  fi
 fi
