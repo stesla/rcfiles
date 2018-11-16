@@ -65,3 +65,10 @@ if ! (builtin type -p pbpaste > /dev/null); then
 fi
 
 alias fixssh='eval $(tmux showenv -s SSH_AUTH_SOCK)'
+
+function fgrep() {
+  dir=$1; shift
+  find $dir \
+    -name .git -prune -o \
+    -type f -exec grep --color -Hn "$@" {} +
+}
