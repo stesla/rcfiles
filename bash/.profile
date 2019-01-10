@@ -29,6 +29,7 @@ export BROWSER EDITOR MAILER PAGER VISUAL
 ###
 PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/X11/bin:/usr/X11R6/bin"
 [[ -d "$HOME/bin" ]] && PATH="$HOME/bin:$PATH"
+[[ -d "$HOME/.local/bin" ]] && PATH="$HOME/.local/bin:$PATH"
 [[ -d "$HOME/.cabal/bin" ]] && PATH="$HOME/.cabal/bin:$PATH"
 [[ -d "$GOROOT/bin" ]] && PATH="$GOROOT/bin:$PATH"
 [[ -d "$HOME/golib/bin" ]] && PATH="$HOME/golib/bin:$PATH"
